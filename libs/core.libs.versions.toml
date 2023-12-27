@@ -1,0 +1,32 @@
+[versions]
+
+spring-framework                = "3.2.0"
+spring-dependency-management    = "1.1.4"
+springdoc-openapi               = "2.3.0"
+junit-jupiter                   = "5.10.1"
+mockito                         = "5.8.0"
+
+
+[libraries]
+
+starter-web     = { module = "org.springframework.boot:spring-boot-starter-web",    version.ref = "spring-framework" }
+openapi-swagger = { module = "org.springdoc:springdoc-openapi-starter-webmvc-ui",   version.ref = "springdoc-openapi" }
+
+junit-api       = { module = "org.junit.jupiter:junit-jupiter-api",     version.ref = "junit-jupiter" }
+junit-params    = { module = "org.junit.jupiter:junit-jupiter-params",  version.ref = "junit-jupiter" }
+junit-engine    = { module = "org.junit.jupiter:junit-jupiter-engine",  version.ref = "junit-jupiter" }
+
+mockito-junit   = { module = "org.mockito:mockito-junit-jupiter",       version.ref = "mockito" }
+mockito-core    = { module = "org.mockito:mockito-core",                version.ref = "mockito" }
+
+
+[bundles]
+
+api-rest    = ['starter-web', 'openapi-swagger']
+junit       = ['junit-api','junit-params','junit-engine','mockito-junit','mockito-core']
+
+[plugins]
+
+spring-boot                     = { id = "org.springframework.boot",        version.ref = "spring-framework" }
+spring-dependency-management    = { id = "io.spring.dependency-management", version.ref = "spring-dependency-management" }
+

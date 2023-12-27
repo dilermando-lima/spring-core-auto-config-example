@@ -1,0 +1,12 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Application",
+            "console": "internalConsole",
+            "request": "launch",
+            "mainClass": "client.Application",
+            "projectName": "api-client"
+        }
+    ]
+}

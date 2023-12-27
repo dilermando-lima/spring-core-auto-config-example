@@ -1,0 +1,27 @@
+plugins {
+	id 'java'
+	alias(libs.plugins.spring.boot)
+	alias(libs.plugins.spring.dependency.management)
+}
+
+repositories {
+	mavenCentral() 
+}
+
+version="1.0.0"
+sourceCompatibility=17
+targetCompatibility=17
+
+sourceSets {
+	main.java.srcDirs = ['src']
+	main.resources.srcDirs = ['src-resource']
+	test.java.srcDirs = ['tst']
+	test.resources.srcDirs = ['tst-resource']
+}
+
+dependencies {
+	implementation project(":api-core")
+	implementation libs.bundles.api.rest
+	testImplementation libs.bundles.junit
+}
+

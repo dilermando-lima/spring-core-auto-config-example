@@ -1,0 +1,10 @@
+include ':api-core';
+include ':api-client';
+
+dependencyResolutionManagement {
+    versionCatalogs {
+        create("libs") {
+            from(files("libs/core.libs.versions.toml"))
+        }
+    }
+}
